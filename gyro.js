@@ -33,9 +33,12 @@ case '/SmartDashboard/Drive/NavX | Yaw': // Gyro rotation
 // Add this at the bottom of ui.js with the other listeners.
 // You can skip this part if you don't want the gyro to have reset on click functionality.
 
-ui.gyro.container.addEventListener('click', function() {
+// Reset gyro value to 0 on click
+ui.gyro.container.onclick = function() {
+	// Store previous gyro val, will now be subtracted from val for callibration
 	ui.gyro.offset = ui.gyro.val;
-    onValueChanged('/SmartDashboard/Drive/NavX | Yaw', ui.gyro.val);
-});
+	// Trigger the gyro to recalculate value.
+	onValueChanged('/SmartDashboard/Drive/NavX | Yaw', ui.gyro.val);
+};
 
 // End section
