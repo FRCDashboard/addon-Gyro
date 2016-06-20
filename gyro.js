@@ -5,8 +5,8 @@
         val: 0,
         offset: 0,
         visualVal: 0,
-        arm: document.getElementById('gyroArm'),
-        number: document.getElementById('gyroNumber')
+        arm: document.getElementById('gyro-arm'),
+        number: document.getElementById('gyro-number')
     },
 
 // End section
