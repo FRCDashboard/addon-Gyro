@@ -4,6 +4,6 @@
     border: solid 2px black;
     border-radius: 50%;
 }
-#gyroArm {
+#gyro-arm {
     transform-origin: bottom;
 }
